@@ -13,6 +13,7 @@ private:
     std::vector<task> taskList;
 public:
     time_t onTick(uint64_t currentTick);
+    void clear_all_tasks();
     void schedule(void(*ifp)(), uint64_t delay, uint64_t period);
     void run_later(void(*ifp)(), uint64_t delay);
 };

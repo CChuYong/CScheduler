@@ -23,3 +23,6 @@ void scheduler::schedule(void(*ifp)(), uint64_t delay, uint64_t period) {
 void scheduler::run_later(void(*ifp)(), uint64_t delay){
     taskList.push_back(task(ifp, delay));
 }
+void scheduler::clear_all_tasks() {
+    taskList.clear();
+}
